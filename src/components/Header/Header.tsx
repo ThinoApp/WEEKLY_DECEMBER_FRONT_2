@@ -1,6 +1,6 @@
 import './Header.scss';
 import config from '@/utils/config';
-import { network, networkIcons } from './Header.utils';
+import { networkIcons } from './Header.utils';
 import { FiChevronDown, FiMenu } from 'react-icons/fi';
 import { MdClose } from 'react-icons/md';
 import { useState } from 'react';

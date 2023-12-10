@@ -1,7 +1,6 @@
-import { ReactNode, Children, useEffect, useState, useMemo } from 'react';
+import { ReactNode, Children } from 'react';
 import { textContainer, textVariant2 } from '@/utils/animation';
 import { motion } from 'framer-motion';
-import { range } from '@/utils/utils';
 
 interface Props {
     title: string;

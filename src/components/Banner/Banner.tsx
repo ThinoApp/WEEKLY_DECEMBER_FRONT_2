@@ -3,16 +3,7 @@ import Header from '../Header/Header';
 import './Banner.scss';
 import { list } from './Banner.utils';
 import { motion } from 'framer-motion';
-import {
-    fadeIn,
-    fadeInDown,
-    slideLeft,
-    slideRight,
-    staggerContainer,
-    textContainer,
-    textVariant2,
-    zoomIn,
-} from '@/utils/animation';
+import { fadeIn, slideLeft, slideRight, staggerContainer, zoomIn } from '@/utils/animation';
 import { TypingH1 } from '../AnimatedComponents/AnimatedComponents';
 const Banner = () => {
     return (
@@ -20,7 +11,7 @@ const Banner = () => {
             <Header />
             <div className="Banner-content">
                 <motion.div
-                    variants={staggerContainer}
+                    variants={staggerContainer()}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: false, amount: 0.25 }}

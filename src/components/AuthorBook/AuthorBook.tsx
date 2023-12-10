@@ -2,7 +2,7 @@ import config from '@/utils/config';
 import { list } from './AuthorBook.utils';
 import { motion } from 'framer-motion';
 import './AuthorBook.scss';
-import { fadeInDown, rotateAndScale, zoomIn } from '@/utils/animation';
+import { fadeInDown, rotateAndScale } from '@/utils/animation';
 const AuthorBook = () => {
     return (
         <div className="AuthorBook">

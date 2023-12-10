@@ -6,7 +6,7 @@ import { TypingH2 } from '../AnimatedComponents/AnimatedComponents';
 const CallOut = () => {
     return (
         <div className="CallOut">
-            <motion.div variants={staggerContainer} initial="hidden" whileInView="show" className="CallOut-left">
+            <motion.div variants={staggerContainer()} initial="hidden" whileInView="show" className="CallOut-left">
                 <TypingH2 title="Get Book Copy Today!" />
                 <p>
                     This the first true value generator on the Internet. It uses alphas dictionary of over 200 Latin

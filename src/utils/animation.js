@@ -1,3 +1,5 @@
+import { Variants } from 'framer-motion';
+
 export const fadeInDown = {
     hidden: {
         opacity: 0,

@@ -1,7 +1,7 @@
 import { list } from './Trusted.utils';
 import './TrustedBy.scss';
 import { motion } from 'framer-motion';
-import { slideRight, staggerContainer } from '@/utils/animation';
+import { slideRight } from '@/utils/animation';
 const TrustedBy = () => {
     return (
         <div className="TrustedBy">
