@@ -1,0 +1,46 @@
+@use '/src/assets/global';
+.TrustedBy {
+    @include global.paddingInline;
+    @apply py-16 flex flex-col items-start sm:items-center;
+    h2 {
+        @apply text-primary flex flex-col items-start sm:items-center mb-4;
+        font-family: Cardo;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 54px;
+        letter-spacing: -0.02em;
+        text-align: center;
+
+        &::after {
+            content: '';
+            @apply w-10 h-[0.5px] bg-secondary;
+        }
+    }
+    ul {
+        @apply w-full flex flex-col items-center  gap-8 sm:flex-row sm:flex-wrap sm:justify-around;
+        li {
+            border-bottom: 1px solid;
+            @apply flex flex-col items-center justify-center py-2 border-b-secondary sm:border-b-0 gap-2 sm:h-52;
+            @apply w-full sm:min-w-[13rem] sm:max-w-[13rem];
+            img {
+                @apply max-w-[9rem] sm:max-w-[7rem] sm:max-h-[5rem] object-cover my-auto;
+            }
+            h3 {
+                @apply text-[20px] text-primary mt-auto;
+                font-family: Cardo;
+
+                font-weight: 700;
+                line-height: 29px;
+                letter-spacing: -0.01em;
+                text-align: center;
+            }
+            p {
+                @apply text-[16px] text-coolGray;
+                font-family: Inter;
+                font-weight: 400;
+                letter-spacing: -0.01em;
+                text-align: center;
+            }
+        }
+    }
+}

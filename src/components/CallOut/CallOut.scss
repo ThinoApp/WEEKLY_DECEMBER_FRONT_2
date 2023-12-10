@@ -1,0 +1,43 @@
+@use '/src/assets/global';
+
+.CallOut {
+    @include global.paddingInline;
+    @apply flex flex-col gap-4 bg-primary py-4 md:flex-row items-center;
+    &-left {
+        @apply flex flex-col gap-4;
+        h2 {
+            @apply text-white flex flex-col items-start mb-4;
+            font-family: Cardo;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 54px;
+            letter-spacing: -0.02em;
+            text-align: center;
+
+            &::after {
+                content: '';
+                @apply w-10 h-[0.5px] bg-secondary;
+            }
+        }
+        p {
+            @apply text-grayLight text-[16px] sm:leading-7;
+            font-family: Inter;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            text-align: left;
+        }
+        button {
+            border: 1px solid;
+            @apply w-full sm:w-fit sm:px-8 border-secondary py-4 sm:py-3 text-white;
+            font-family: Cardo;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+    }
+    img {
+        @apply w-full sm:w-1/2;
+    }
+}

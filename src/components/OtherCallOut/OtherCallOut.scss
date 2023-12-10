@@ -1,0 +1,47 @@
+@use '/src/assets/global';
+.OtherCallOut {
+    @include global.paddingInline;
+    @apply flex items-center justify-center py-12 sm:py-20;
+    &-content {
+        @apply w-full px-4 py-4  bg-secondary flex flex-col items-center justify-center sm:h-[50vh] gap-4 sm:gap-4;
+    }
+    h2 {
+        @apply text-primary text-[28px] sm:text-[22px] text-center flex flex-col items-center  mb-4;
+        font-family: Cardo;
+
+        font-weight: 700;
+        letter-spacing: -0.02em;
+
+        &::after {
+            content: '';
+            @apply w-10 h-[0.5px] bg-primary;
+        }
+    }
+    p {
+        @apply text-primary text-[20px] sm:text-sm text-center sm:w-2/4 sm:leading-[28px];
+        font-family: Inter;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+    }
+
+    .form-control {
+        @apply w-full sm:h-10 sm:w-3/4 flex flex-col sm:flex-row items-center gap-2;
+        input {
+            @apply w-full sm:h-full px-2 py-4 text-[17px] sm:text-sm sm:py-2 text-primary;
+            font-family: Inter;
+            font-weight: 400;
+
+            letter-spacing: -0.01em;
+            text-align: left;
+            outline: none;
+        }
+        button {
+            @apply text-white text-[17px] sm:h-full sm:text-sm bg-primary w-full sm:w-3/5 py-4 sm:py-2;
+            font-family: Cardo;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+    }
+}

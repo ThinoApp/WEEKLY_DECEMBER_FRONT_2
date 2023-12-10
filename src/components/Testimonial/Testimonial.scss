@@ -1,0 +1,77 @@
+@use '/src/assets/global';
+
+.Testimonial {
+    @include global.paddingInline;
+    @apply w-full py-8 sm:py-28 flex flex-col items-center gap-5 sm:flex-row;
+    &-left {
+        @apply w-fit flex flex-col items-center gap-3 sm:items-start;
+        & > div {
+            @apply flex flex-col items-center gap-1 sm:flex-row;
+            span {
+                @apply text-primary text-[22px] sm:text-[20px];
+                font-family: Cardo;
+                font-weight: 700;
+                line-height: 26px;
+                letter-spacing: -0.01em;
+                text-align: left;
+            }
+        }
+        h2 {
+            @apply text-primary  text-center sm:text-left flex flex-col items-center sm:items-start mb-4;
+            font-family: Cardo;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+
+            &::after {
+                content: '';
+                @apply w-10 h-[0.5px] bg-secondary;
+            }
+        }
+
+        p {
+            @apply text-coolGray text-[19px] text-center sm:text-left text-sm sm:w-2/3;
+            font-family: Inter;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            &:nth-last-of-type(1) {
+                @apply text-primary text-[22px] sm:text-[18px];
+            }
+        }
+    }
+
+    &-right {
+        @apply flex flex-col items-center gap-4 xslarge:grid xslarge:grid-cols-2;
+        .Testimonial-item {
+            @apply flex flex-col items-center bg-primary p-4 rounded-sm sm:gap-2;
+            &:nth-last-of-type(1) {
+                @apply sm:col-start-2 sm:row-start-1 sm:row-end-3;
+            }
+            h3 {
+                @apply w-full text-white text-[19px] sm:text-sm text-center sm:text-left;
+                font-family: Cardo;
+                font-weight: 700;
+                line-height: 29px;
+                letter-spacing: -0.02em;
+            }
+
+            p {
+                @apply text-[16px] sm:text-[14px] text-grayLight text-center sm:text-left;
+                font-family: Inter;
+                font-weight: 400;
+                letter-spacing: -0.01em;
+            }
+
+            &--top {
+                @apply w-full flex flex-col sm:flex-row items-center sm:gap-3;
+                img {
+                    @apply w-20 h-20 sm:w-14 sm:h-14 rounded-full object-cover;
+                }
+
+                & > div {
+                    @apply flex flex-col items-center sm:items-start gap-2 sm:gap-0;
+                }
+            }
+        }
+    }
+}

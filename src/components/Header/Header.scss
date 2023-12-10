@@ -1,0 +1,106 @@
+.Header {
+    @apply flex flex-row gap-2 py-4 flex-wrap;
+    &-logo {
+        @apply flex items-center gap-1;
+        img {
+            @apply w-4;
+        }
+        h2 {
+            @apply font-inter text-white;
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+    &-network {
+        @apply flex items-center gap-2 ml-2;
+        .icon-container {
+            @apply bg-white w-6 h-6 flex rounded-sm items-center justify-center;
+            img {
+                @apply object-contain;
+            }
+        }
+    }
+    &-menu {
+        @apply items-center gap-8 ml-auto flex-wrap;
+        li {
+            @apply text-white flex items-center;
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease-out;
+            &:hover {
+                border-bottom: 1px solid white;
+            }
+            &:nth-last-child(2) {
+                @apply relative;
+                img {
+                    @apply w-5;
+                }
+                p {
+                    @apply w-4 h-4 bg-secondary rounded-full flex items-center justify-center absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 text-[10px] text-primary;
+                    font-family: Inter;
+                    font-weight: 800;
+                    line-height: 13px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+                }
+            }
+            button {
+                @apply bg-secondary text-primary px-8 py-2;
+                font-family: Cardo;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                text-align: center;
+            }
+        }
+    }
+    &-menu-small {
+        @apply ml-auto fixed right-[6vw] z-50;
+        ul {
+            @apply absolute right-0 top-11 bg-primary px-8 py-4 rounded-md flex  flex-col gap-3;
+            box-shadow: 0px 28px 57px 0px #bebebe40;
+            li {
+                @apply text-white;
+                font-family: Inter;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 21px;
+                letter-spacing: -0.01em;
+                text-align: left;
+                &:nth-last-child(2) {
+                    @apply relative w-fit;
+                    img {
+                        @apply w-5;
+                    }
+                    p {
+                        @apply w-4 h-4 bg-secondary rounded-full flex items-center justify-center absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 text-[10px] text-primary;
+                        font-family: Inter;
+                        font-weight: 800;
+                        line-height: 13px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                    }
+                }
+                button {
+                    @apply bg-secondary text-primary px-8 py-2;
+                    font-family: Cardo;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

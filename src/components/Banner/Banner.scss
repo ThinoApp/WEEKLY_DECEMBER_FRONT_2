@@ -1,0 +1,95 @@
+@use '/src/assets/global';
+
+.Banner {
+    @include global.paddingInline;
+    @apply flex flex-col sm:gap-8 h-fit bg-primary py-4 sm:pb-24;
+    &-content {
+        @apply flex flex-col items-start sm:items-center sm:flex-row gap-4 sm:gap-12;
+        &-left {
+            @apply flex flex-col gap-4 sm:gap-8  w-full sm:w-1/2;
+            h3 {
+                @apply flex items-center text-white gap-4 text-[22px] sm:text-[18px];
+                font-family: Cardo;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 37px;
+                letter-spacing: -0.02em;
+                &::before {
+                    content: '';
+                    @apply block w-16 sm:w-12 h-[0.8px] bg-secondary;
+                }
+            }
+            h1 {
+                @apply text-white text-[65px] text-center sm:text-left sm:text-[2.8rem] leading-[72px] sm:leading-[60px];
+                font-family: Cardo;
+                font-weight: 700;
+                word-wrap: break-word;
+                letter-spacing: -0.02em;
+            }
+            & > p {
+                @apply text-grayLight text-[19px] sm:text-[14px] leading-8 sm:leading-6;
+                font-family: Inter;
+                font-weight: 400;
+                letter-spacing: -0.01em;
+                text-align: left;
+            }
+        }
+        &-cta {
+            @apply flex items-center gap-2 sm:gap-8;
+            button:nth-child(1) {
+                @apply bg-secondary text-primary px-8 py-2;
+                font-family: Cardo;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                text-align: center;
+            }
+            button:nth-child(2) {
+                @apply text-white px-2;
+                border-bottom: 1px solid white;
+                font-family: Cardo;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                text-align: center;
+            }
+        }
+        &-list {
+            @apply w-full flex flex-col gap-3 flex-wrap justify-center sm:flex-row sm:justify-between;
+            li {
+                @apply flex items-start  gap-2 w-full px-2 sm:w-[28%];
+                &:nth-last-child(1) {
+                    @apply sm:w-[38%];
+                }
+                .list-badge {
+                    @apply w-4 h-4 bg-secondary rounded-full relative top-1 sm:top-2 sm:w-3 sm:h-3;
+                }
+                .list-content {
+                    @apply flex items-center  sm:items-start justify-between w-[90%] sm:w-[70%] sm:flex-col gap-1;
+                    h4 {
+                        @apply text-white p-0 m-0 text-[20px] sm:text-sm;
+                        font-family: Cardo;
+                        font-weight: 700;
+                        // line-height: 29px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                    }
+                    p {
+                        @apply text-grayLight sm:w-full;
+                        font-family: Inter;
+                        font-size: 12px;
+                        font-weight: 400;
+                        // line-height: 31px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        & > img {
+            @apply w-full sm:w-[50%] object-cover mt-4;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@use '/src/assets/global';
+.Blog {
+    @include global.paddingInline;
+    @apply flex flex-col items-center bg-lightBlue py-4 sm:py-24 sm:gap-8;
+    h2 {
+        @apply text-primary  text-center flex flex-col items-center  mb-4;
+        font-family: Cardo;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+
+        &::after {
+            content: '';
+            @apply w-10 h-[0.5px] bg-secondary;
+        }
+    }
+
+    ul {
+        @apply px-4 sm:p-0 w-screen sm:w-full flex flex-row sm:flex-wrap sm:justify-center sm:gap-4 items-start overflow-x-scroll sm:overflow-x-visible  gap-4 snap-x snap-mandatory;
+        li {
+            @apply min-w-[90vw] sm:min-w-0 sm:w-[19rem]  bg-white snap-center sm:h-fit;
+            img {
+                @apply w-full object-cover sm:max-h-52;
+            }
+            & > div {
+                @apply p-3 flex flex-col items-start gap-2;
+                h3 {
+                    @apply text-primary text-[24px] sm:text-[16px] leading-[29px] sm:leading-[24px];
+                    font-family: Cardo;
+                    font-weight: 700;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                }
+                p {
+                    @apply text-coolGray text-[17px] sm:text-[13px] leading-[28px] sm:leading-[24px];
+                    font-family: Inter;
+                    font-weight: 400;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+                }
+
+                .blog-cta-container {
+                    @apply w-full flex flex-row items-center justify-between;
+                    button {
+                        @apply text-primary border-b-2 border-b-primary text-[18px] sm:text-[14px];
+                        font-family: Cardo;
+                        font-weight: 700;
+                        line-height: 23px;
+                        letter-spacing: 0.02em;
+                        text-align: center;
+                    }
+                    p {
+                        @apply text-primary;
+                        font-family: Inter;
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        letter-spacing: 0em;
+                        text-align: right;
+                    }
+                }
+            }
+            box-shadow: 0px 35px 25px 0px #040b140a;
+        }
+    }
+}

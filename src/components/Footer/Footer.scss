@@ -1,0 +1,93 @@
+@use '/src/assets/global';
+.Footer {
+    @include global.paddingInline;
+    @apply w-full bg-primary flex flex-col items-center py-4 sm:py-16;
+    &-top {
+        @apply flex flex-col gap-4 w-full sm:flex-row sm:flex-wrap sm:items-start;
+        & > div {
+            @apply sm:flex-xs;
+            &:nth-of-type(1) {
+                @apply sm:flex-small;
+            }
+            &:nth-last-of-type(1) {
+                @apply sm:flex-small;
+            }
+        }
+    }
+    &-social {
+        @apply flex flex-col  items-start gap-4;
+        & > div {
+            @apply flex items-center gap-2;
+            h2 {
+                @apply text-white text-[30px] sm:text-[20px];
+                font-family: Inter;
+                font-weight: 700;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        ul {
+            @apply flex items-center gap-4;
+            li {
+                @apply w-12 h-12 sm:w-8 sm:h-8 border-[1px] border-secondary flex items-center justify-center;
+            }
+        }
+    }
+    &-explore {
+        @apply flex flex-col items-start gap-2 border-b-[1px] sm:border-0 border-b-white py-4 sm:py-0;
+        h3 {
+            @apply text-white text-[24px] sm:text-[18px];
+            font-family: Cardo;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-align: left;
+        }
+        ul {
+            @apply grid grid-cols-2 grid-flow-row gap-x-2 gap-y-4;
+            @apply sm:flex flex-col;
+            li {
+                @apply flex items-center gap-2;
+                p {
+                    @apply text-white text-[16px] sm:text-[14px] text-grayLight;
+                    font-family: Inter;
+                    font-weight: 400;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+                }
+            }
+        }
+        &:nth-last-child(1) {
+            @apply gap-4;
+            ul {
+                @apply flex flex-col items-start;
+                li {
+                    @apply w-full grid grid-cols-2diff justify-start;
+                    p:nth-of-type(1) {
+                        @apply text-white flex items-start text-[18px] sm:text-[14px] justify-start h-full;
+                        font-family: Cardo;
+                        font-weight: 700;
+                        letter-spacing: 0.02em;
+                    }
+                    p:nth-of-type(2) {
+                        @apply text-grayLight text-[18px] sm:text-[14px]  leading-[26px] sm:leading-[20px];
+                        font-family: Inter;
+                        font-weight: 400;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    &-copyright {
+        @apply text-center text-grayLight text-[17px] sm:text-[14px] leading-[28px] sm:mt-12;
+        font-family: Inter;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        span {
+            @apply text-white;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@use '/src/assets/global';
+.AuthorBook {
+    @include global.paddingInline;
+    @apply flex flex-col items-center pt-8 sm:py-16;
+    h2 {
+        @apply text-primary flex flex-col items-center mb-4;
+        font-family: Cardo;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 54px;
+        letter-spacing: -0.02em;
+        text-align: center;
+
+        &::after {
+            content: '';
+            @apply w-10 h-[0.5px] bg-secondary;
+        }
+    }
+    &-content {
+        @apply flex flex-col items-center w-full lg:flex-row sm:gap-12 sm:mt-8 flex-wrap;
+        &-item {
+            @apply flex flex-col items-center gap-4 sm:gap-6 sm:flex-2 sm:flex-row object-cover flex-wrap;
+            & > img {
+                @apply w-full sm:w-[48%];
+            }
+            & > div {
+                @apply w-full flex flex-col items-center sm:flex-1 sm:items-start gap-3;
+                h3 {
+                    @apply text-primary text-[24px] sm:text-[27px];
+                    font-family: Cardo;
+                    // font-size: 24px;
+                    font-weight: 700;
+                    line-height: 38px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                }
+                p {
+                    @apply text-coolGray text-[16px]  sm:leading-6;
+                    font-family: Inter;
+                    font-weight: 400;
+                    // line-height: 34px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+                }
+                button {
+                    border: 1px solid;
+                    @apply w-full sm:w-fit sm:px-8 border-secondary py-4 sm:py-3 text-primary;
+                    font-family: Cardo;
+                    font-size: 17px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    text-align: center;
+                }
+            }
+        }
+        &-list {
+            @apply w-full flex flex-col gap-3 flex-wrap justify-center sm:flex-row sm:justify-between;
+            li {
+                @apply flex items-start  gap-2 w-full px-2 flex-1;
+                .list-badge {
+                    @apply w-4 h-4 bg-secondary rounded-full relative top-1 sm:top-2 sm:w-3 sm:h-3;
+                }
+                .list-content {
+                    @apply flex items-center  sm:items-start justify-between w-[90%] sm:w-[85%] sm:flex-col gap-1;
+                    h4 {
+                        @apply text-primary p-0 m-0 text-[18px] sm:text-[16px];
+                        font-family: Cardo;
+                        font-weight: 700;
+                        // line-height: 29px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                    }
+                    p {
+                        @apply text-coolGray sm:w-full;
+                        font-family: Inter;
+                        font-size: 13px;
+                        font-weight: 400;
+                        // line-height: 31px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@use '/src/assets/global';
+.WhatLearn {
+    @include global.paddingInline;
+    @apply flex flex-col items-center py-8;
+    h2 {
+        @apply text-primary flex flex-col items-center mb-4;
+        font-family: Cardo;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 54px;
+        letter-spacing: -0.02em;
+        text-align: center;
+
+        &::after {
+            content: '';
+            @apply w-10 h-[0.5px] bg-secondary;
+        }
+    }
+    &-content {
+        @apply flex flex-col lg:flex-row items-center justify-between gap-4;
+        &-left {
+            @apply flex flex-col sm:grid sm:grid-cols-2 sm:grid-flow-row gap-2 sm:w-full lg:w-1/2;
+            &-item {
+                @apply flex flex-row gap-4 bg-lightBlue p-3 sm:p-8 sm:h-48  sm:flex-col;
+                p:nth-child(1) {
+                    @apply text-primary w-8 h-8 text-lg rounded-full bg-secondary flex items-center justify-center;
+                    font-family: Cardo;
+                    font-weight: 700;
+                    line-height: 29px;
+                    letter-spacing: -0.01em;
+                    text-align: center;
+                }
+                p:nth-child(2) {
+                    @apply flex-1 text-sm text-primary;
+                    font-family: Cardo;
+                    font-weight: 700;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+                }
+            }
+        }
+        img {
+            @apply w-full lg:w-[45%] object-cover;
+        }
+    }
+}
